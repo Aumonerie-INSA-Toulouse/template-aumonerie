@@ -7,6 +7,11 @@
 \usepackage{amsmath, amsfonts,atbegshi, fancyhdr, graphicx, float, hyperref, xcolor, framed, dsfont, latexsym , upgreek , datetime , xcolor , caption, listings ,tikz, hyperref,eso-pic, transparent}
 \usepackage[newfloat]{minted}
 
+\usepackage{emoji}
+\usepackage[many]{tcolorbox}
+
+\usepackage{hyperref}
+
 \pagestyle{fancy}
 \fancyhf{}
 \setlength{\footskip}{32.05098pt}
@@ -36,3 +41,15 @@
 \definecolor{pourpre}{RGB}{245, 36, 255}
 \definecolor{bleu}{RGB}{40, 212, 223}
 % Nombre total de pages (à remplacer par le nombre de pages réel)
+
+
+% boxes
+\definecolor{warnFront}{RGB}{255, 149, 0}
+\definecolor{warnBack}{RGB}{245, 186, 103}
+\newtcolorbox{Warning}{
+    colback = warnBack,
+    enhanced,
+    boxrule = 1.5pt, 
+    colframe = white, % making the base for dash line
+    borderline = {1.5pt}{0pt}{warnFront, dashed} % add "dashed" for dashed line
+}
